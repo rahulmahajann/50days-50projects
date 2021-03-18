@@ -1,0 +1,59 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    overflow: hidden;
+    margin: 0;
+}
+
+.main_box{
+    display: flex;
+    width: 90vw;
+}
+
+.image{
+    background-size: auto 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 80vh;
+    border-radius: 50px;
+    color: #fff;
+    cursor: pointer;
+    flex: 0.5;
+    margin: 10px;
+    position: relative;
+    transition: flex 0.7s ease-in;
+}
+
+.image h3{
+    font-size: 24px;
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    margin: 0;
+    opacity: 0;
+}
+
+.image.active{
+    flex: 5;
+}
+
+.image.active h3{
+    opacity:1;
+}
+
+@media(max-width: 30em){
+    .main_box{
+        width: 100vw;
+    }
+
+    .image:nth-of-type(4),
+    .image:nth-of-type(5){
+        display: none;
+    }
+}
