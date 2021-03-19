@@ -1,0 +1,99 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #000;
+    color: rgb(11, 99, 43);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    margin: 0;
+    height: 90vh;
+}
+
+h1{
+    position: absolute;
+    top: 5%;
+    margin-bottom: 5em;
+}
+
+.main_box{
+    text-align: center;
+}
+
+.sub{
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    margin-bottom: 2em;
+    max-width: 100%;
+    width: 20em;
+}
+
+.sub::before{
+    content: '';
+    background-color: rgb(187, 131, 11);
+    position: absolute;
+    top: 50%;
+    left: 0;
+    height: .25em;
+    width: 100%;
+    transform: translateY(-50%);
+    z-index: -1;
+    opacity: 0.2;
+    transition: linear 0.5s ease  ;
+}
+
+.progress{
+    background-color: rgb(255, 0, 0);
+    position: absolute;
+    top: 50%;
+    left: 0;
+    height: .25em;
+    width: 0;
+    opacity: 0.5;
+    transform: translateY(-50%);
+    z-index: -1; 
+    transition: linear 0.5s ease  ;
+}
+
+.circle{
+    background-color: #fff;
+    padding: 0.1em;
+    height: 2em;
+    width: 2em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 3px solid rgba(187, 131, 11, 0.789);
+}
+
+.circle.active{
+    border-radius: 50%;
+    background-color: #000;
+    color: rgb(186, 8, 8);
+    border: 5px solid rgb(7, 145, 39);
+}
+
+.btn{
+    cursor: pointer;
+    margin: 2em 2em;
+    padding: 0.5em 2em;
+    margin: 0.4em  ;
+    border: none;
+    border-radius: 0.75em;
+    color: rgb(0, 0, 0);
+    background: rgb(41, 144, 1);
+}
+
+.btn:hover{
+    background-color: #000;
+    color: rgb(35, 175, 7);
+}
+
+.btn:disabled{
+    background-color: #000;
+    cursor: not-allowed;
+}
