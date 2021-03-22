@@ -1,0 +1,102 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    overflow-x: hidden;
+    margin: 0;
+    background: #000;
+    color: #fff;
+}
+
+.main_box{
+    background-color: #fafafa;
+    color: #000;
+    transform-origin: top left;
+    transition: transform 0.5 linear;
+    width: 100vw;
+    min-height: 100vh;
+    padding: 3em;
+}
+
+
+.main_box.show-nav{
+    transform: rotate(-20deg);
+}
+
+.circle-container{
+    position: fixed;
+    top: -6em;
+    left: -6em;
+}
+
+.circle{
+    background-color: #ff7979;
+    height: 12em;
+    width: 12em;
+    border-radius: 50%;
+    position: relative;
+    transition: transform 0.5s linear;
+}
+
+.circle button{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    height: 6em;
+    background: transparent;
+    border: 0;
+    color: #fff;
+}
+
+.circle button:focus{
+    outline: none;
+}
+
+.circle button.open{
+    left: 60%;
+}
+.circle button.close{
+    top: 60%;
+    transform: rotate(90deg);
+    transform-origin: top left;
+}
+
+.main_box.show-nav .circle{
+    transform: rotate(-70deg);
+}
+
+nav{
+    position: fixed;
+    left: 0;
+    bottom: 2.5em;
+    z-index: 5;
+}
+
+nav ul{
+    list-style: none;
+    padding-left: 2em;
+}
+
+nav ul li{
+    text-transform: uppercase;
+    color: rgb(243, 243, 243);
+    margin: 2.5em 0;
+    transform:  translateX(-100%);
+    transition: transform 0.4 ease-in;
+}
+
+nav ul li + li{
+    margin-left: 1em;
+    transform: translateX(-150%);
+}
+
+nav ul li+li+li{
+    margin-left: 2em;
+    transform: translateX(-200%);
+}
+
+.main_box.show-nav + nav li{
+    transform: translateX(0);
+    transition-delay: 0.3s;
+}
