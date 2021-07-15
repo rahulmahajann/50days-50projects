@@ -1,0 +1,49 @@
+body{
+    text-align: center;
+    padding-top: 10em;
+}
+
+button{
+    font-size: 14px;
+    padding: 5em 5em;
+    border-radius: 10px;
+    margin: 2em;
+}
+
+.red{
+    background-color: red;
+}
+
+/* .red:hover{
+    background-color: rgb(209, 110, 53);
+} */
+
+.yellow{
+    background-color: yellow;
+}
+
+/* .yellow:hover{
+    background-color: rgb(202, 202, 51);
+} */
+
+.blue{
+    background-color: blue;
+}
+
+/* .blue:hover{
+    background-color: rgb(85, 128, 221);
+} */
+
+.green{
+    background-color: green;
+}
+
+/* .green:hover{
+    background-color: rgb(74, 187, 74);
+} */
+
+.clicked{
+    background-color: #000;
+}
+
+/* .gr */
