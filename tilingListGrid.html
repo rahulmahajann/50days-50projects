@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport"
+		content="width=device-width, initial-scale=1.0">
+	
+	<style>
+		* {
+			padding: 0;
+			margin: 0;
+			box-sizing: border-box;
+			background-color: #5b5b5b;
+		}
+		ul {
+			/* to get it in center */
+			position:fixed;
+			top:50vh;
+			left:50vw;
+			transform: translate(-50%,-50%);
+			list-style-type:none;
+			display:grid;
+			/* Create 3 columns */
+			grid-template-columns: repeat(3,16vw);
+			/* Give gap between the rows and columns */
+			gap:40px 10px;
+		}
+		li {
+			height: 60px;
+			font-size: 20px;
+			box-shadow: 0 0 1em rgba(0, 0, 0, 0.2);
+			color: white;
+			line-height: 60px;
+			transition: 0.25s;
+			cursor: pointer;
+		}
+		/* if it is the 1st column, set the styles accordingly */
+		li:nth-child(3n+1) {
+			background:linear-gradient(to left, #c0e218, #16c79a);
+			left:20vw;
+			text-align: right;
+			padding-right:30px;
+			transform: perspective(25em) rotateY(-45deg);
+		}
+		/* if it is the 2nd column, set the styles accordingly */
+		li:nth-child(3n+2) {
+			background:linear-gradient(to left, #c0e218, #16c79a,#c0e218);
+			left:20vw;
+			text-align: center;
+		}
+		/* if it is the 3rd column, set the styles accordingly */
+		li:nth-child(3n+3) {
+			padding-left:30px;
+			background:linear-gradient(to right, #c0e218, #16c79a);
+			left:40vw;
+			transform:perspective(25em) rotateY(45deg);
+		}
+		/* hover effect on column 1 */
+		li:nth-child(3n+1):hover {
+			transform:skew(15deg, 10deg) scaleY(1.4);
+		}
+		/* hover effect on column 2 */
+		li:nth-child(3n+2):hover {
+			transform:scale(1.1,1.4);
+		}
+		/* hover effect on column 3 */
+		li:nth-child(3n+3):hover {
+			transform:skew(-15deg, -10deg) scaleY(1.4);
+		}
+	</style>
+</head>
+
+<body>
+	<!-- sample list -->
+	<ul>
+		<li>GeeksforGeeks</li>
+		<li>GFG</li>
+		<li>GFG</li>
+		<li>GeeksforGeeks</li>
+		<li>GeeksforGeeks</li>
+		<li>GFG</li>
+		<li>GFG</li>
+		<li>GeeksforGeeks</li>
+		<li>GeeksforGeeks</li>
+		<li>GFG</li>
+		<li>GFG</li>
+		<li>GeeksforGeeks</li>
+		<li>GeeksforGeeks</li>
+		<li>GFG</li>
+		<li>GFG</li>
+	</ul>
+</body>
+
+</html>
