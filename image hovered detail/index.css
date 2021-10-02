@@ -1,0 +1,73 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* In this part, we will define the characteristics
+  of the body of the page and align the content */
+  body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #000;
+  }
+  
+  /* In this part, we will position and set the image
+  in the page */
+  .main_box {
+    margin-top: 15em;
+    margin-left: 15em;
+    width: 22em;
+    position: relative;
+    transform: center -5em;
+  
+    /* We will the animation defined below to
+       this element */
+    animation: move infinite 0.5s alternate ease-in-out;
+  }
+  
+  
+  .main_box::before {
+    content: "";
+    width: 0.75em;
+    height: 0.75em;
+    position: absolute;
+    left: 50%;
+    top: -20%;
+    transform: translateX(-50%);
+    border: 0.125em solid rgb(6, 108, 9);
+    border-radius: 50%;
+    background-color: #ff7a00;
+  }
+  
+  .main_box::after {
+    content: "";
+    position: absolute;
+    width: 0.5em;
+    height: 5em;
+    border-radius: 0.75em;
+    left: 50%;
+    top: -20%;
+    transform: translateX(-50%);
+    border: 0.125em solid rgb(6, 108, 9);
+    position: fixed;
+  
+    /* The z-index of -2 is set to keep the object of 
+      ::after pseudo-class to beneath the other objects
+    */
+    z-index: -2;
+  }
+  
+  /* @keyframes is used to add the swinging
+     animation to our code! */
+  
+  @keyframes move {
+    from {
+      transform: rotate(-6deg);
+    }
+    to {
+      transform: rotate(6deg);
+    }
+  }
+</style>
